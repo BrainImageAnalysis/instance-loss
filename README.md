@@ -1,7 +1,33 @@
 # instance-loss
-Official implementation of instance loss functions, a family of instance-level segmentation and detection loss functions, to improve semantic segmentation and detection of multiple instances in biomedical images. This work is based on a paper titled **Instance loss functions: A family of instance-level segmentation and detection loss functions to improve semantic segmentation and detection of white matter hyperintensities in routine clinical brain MRI**.
+Official implementation of **instance loss functions**, a family of instance-level segmentation and detection loss functions, to improve semantic segmentation and detection of multiple instances in biomedical images. Please cite our publications below if our proposed loss functions are beneficial to your research and work.
 
-This loss function is an extended work of our previously proposed Instance-wise and Center-of-Instance (ICI) segmentation loss based on a paper titled **Improving Segmentation of Objects with Varying Sizes in Biomedical Images using Instance-wise and Center-of-Instance Segmentation Loss Function** [[GitHub]]([https://openreview.net/forum?id=8o83y0_YtE&referrer=%5BAuthor%20Console%5D%28/group?id=MIDL.io/2023/Conference/Authors#your-submissions%29](https://github.com/BrainImageAnalysis/ICI-loss/tree/main))[[OpenReview]](https://openreview.net/forum?id=8o83y0_YtE&referrer=%5BAuthor%20Console%5D%28/group?id=MIDL.io/2023/Conference/Authors#your-submissions%29)[[submitted PDF]](https://openreview.net/pdf?id=8o83y0_YtE)[[arXiv]](https://arxiv.org/abs/2304.06229), which was accepted in MIDL 2023 ([oral presentation](https://openreview.net/group?id=MIDL.io/2023/Conference)). Please cite accordingly (please use the arXiv version for now).
+1. The main publication of this study is entitled "*A new family of instance-level loss functions for improving instance-level segmentation and detection of white matter hyperintensities in routine clinical brain MRI*" published in the Computers in Biology and Medicine journal [[DOI]](https://doi.org/10.1016/j.compbiomed.2024.108414).
+
+```
+@article{RACHMADI2024108414,
+title = {A new family of instance-level loss functions for improving instance-level segmentation and detection of white matter hyperintensities in routine clinical brain MRI},
+journal = {Computers in Biology and Medicine},
+pages = {108414},
+year = {2024},
+issn = {0010-4825},
+doi = {https://doi.org/10.1016/j.compbiomed.2024.108414},
+url = {https://www.sciencedirect.com/science/article/pii/S0010482524004980},
+author = {Muhammad Febrian Rachmadi and Michal Byra and Henrik Skibbe},
+}
+```
+
+2. This family of the instance-level loss function is an extended work of our previously proposed **Instance-wise and Center-of-Instance (ICI) segmentation loss** based on a paper titled "*Improving Segmentation of Objects with Varying Sizes in Biomedical Images using Instance-wise and Center-of-Instance Segmentation Loss Function*" [[GitHub]](https://github.com/BrainImageAnalysis/ICI-loss)[[PDF]](https://proceedings.mlr.press/v227/rachmadi24a/rachmadi24a.pdf)[[OpenReview]](https://openreview.net/forum?id=8o83y0_YtE&referrer=%5BAuthor%20Console%5D%28/group?id=MIDL.io/2023/Conference/Authors#your-submissions%29)[[arXiv]](https://arxiv.org/abs/2304.06229), which was accepted in MIDL 2023 ([oral presentation](https://openreview.net/group?id=MIDL.io/2023/Conference)).
+
+```
+@inproceedings{rachmadi2024improving,
+  title={Improving segmentation of objects with varying sizes in biomedical images using instance-wise and center-of-instance segmentation loss function},
+  author={Rachmadi, Febrian and Poon, Charissa and Skibbe, Henrik},
+  booktitle={Medical Imaging with Deep Learning},
+  pages={286--300},
+  year={2024},
+  organization={PMLR}
+}
+```
 
 ## Abstract
 In this study, we introduce instance loss functions, a family of instance-level segmentation and detection loss functions, aimed at enhancing the training of neural networks for segmenting and detecting objects in biomedical image data, especially when objects appear in varied numbers and sizes. These functions, namely the instance segmentation loss ($\mathcal{L}_{\textrm{instance}}$), the instance center loss ($\mathcal{L}_{\textrm{center}}$), the false instance rate loss ($\mathcal{L}_{\textrm{false}}$), and the instance proximity loss ($\mathcal{L}_{\textrm{proximity}}$), focus on object instances rather than pixel-by-pixel comparisons. The $\mathcal{L}_{\textrm{instance}}$ is crafted to improve instance-wise segmentation quality, $\mathcal{L}_{\textrm{center}}$ is crafted to improve segmentation quality of small instances, $\mathcal{L}_{\textrm{false}}$ is optimized to minimize the rate of false and missed detections across an image with a diverse range of instance sizes, and $\mathcal{L}_{\textrm{proximity}}$ is crafted to improve detection by pulling predictions towards the ground truth. We benchmarked our proposed instance loss functions, both individually and in combination through ensemble inference models approach, against traditional methods using the task of segmenting white matter hyperintensities (WMH) in brain MRI. This was sourced from the Alzheimer's Disease Neuroimaging Initiative (ADNI) and the WMH Segmentation Challenge datasets, both of which exhibit a significant variation in WMH instance sizes. Our empirical evaluations revealed that combining two instance-level loss functions of through ensemble inference models approach noticeably outperformed models using other loss function on both ADNI and WMH Segmentation Challenge dataset for segmentation and detection of WMH instances.
