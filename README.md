@@ -34,7 +34,7 @@ In this study, we introduce instance loss functions, a family of instance-level 
 
 ## Available losses
 
- - InstanceLoss loss [[code]](https://github.com/BrainImageAnalysis/instance-loss/blob/main/losses/InstanceCenterLoss.py) (see Appendix A and B for formalism)
+ - InstanceLoss loss [[code]](https://github.com/BrainImageAnalysis/instance-loss/blob/main/losses/InstanceCenterLoss.py)
    - This loss function calculates 4 different losses:
         1. Instance segmentation loss
             1.a Instance segmentation loss for ground truth (`labels`) instances
@@ -42,7 +42,7 @@ In this study, we introduce instance loss functions, a family of instance-level 
         2. Instance center loss
         3. False instance rate loss
         4. Instance proximity loss 
- - InstanceCenterLoss [[code]](https://github.com/BrainImageAnalysis/instance-loss/blob/main/losses/InstanceLoss.py) (see Appendix C for formalism)
+ - InstanceCenterLoss [[code]](https://github.com/BrainImageAnalysis/instance-loss/blob/main/losses/InstanceLoss.py)
    - This loss function calculates 3 different losses:
         1. Instance segmentation loss
             1.a Instance segmentation loss for ground truth (`labels`) instances
