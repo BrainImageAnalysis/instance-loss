@@ -53,6 +53,9 @@ In this study, we introduce instance loss functions, a family of instance-level 
 ## How to use
 Please see `example_colab.ipynb`, which was written specifically for Google Colaboratory. Also, folder `example_blobs` contains example blobs that are used for visualization in the paper.
 
+## FAQ
+- **Q:** How to calculate instance loss functions for multi-class segmentation tasks? **A:** Please see [this issue](https://github.com/BrainImageAnalysis/instance-loss/issues/1).
+
 ## Class Arguments
 
  - `loss_function_pixel`: Any segmentation loss used to calculate the quality of segmentation in pixel-wise level. Written in the original paper as $L_{global}$ in the formalism.
